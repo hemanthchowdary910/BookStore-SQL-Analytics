@@ -63,7 +63,8 @@ Customers
     | Many : 1
     |
   Books
-
+```
+---
 
 - One customer can place multiple orders.
 - One book can appear in multiple orders.
