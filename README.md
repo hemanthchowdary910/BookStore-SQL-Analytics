@@ -63,3 +63,109 @@ Customers
     | Many : 1
     |
   Books
+
+
+- One customer can place multiple orders.
+- One book can appear in multiple orders.
+
+---
+
+## Dataset Information
+
+The project uses three CSV datasets:
+
+- **Books.csv** - Contains book details such as title, author, genre, price, and stock.
+- **Customers.csv** - Contains customer information.
+- **Orders.csv** - Contains order transaction details.
+
+The datasets were imported into PostgreSQL using the `COPY` command.
+
+---
+
+## SQL Concepts Practiced
+
+The project demonstrates the following SQL concepts:
+
+- Database and table creation
+- Primary keys and foreign keys
+- Data importing using `COPY`
+- Filtering with `WHERE`
+- Sorting with `ORDER BY`
+- Aggregate functions:
+  - `SUM()`
+  - `COUNT()`
+  - `AVG()`
+- `GROUP BY` and `HAVING`
+- `INNER JOIN`
+- `LEFT JOIN`
+- Subqueries
+- `COALESCE()`
+- Window Functions:
+  - `RANK()`
+  - `DENSE_RANK()`
+  - `ROW_NUMBER()`
+  - `LAG()`
+- Common Table Expressions (CTEs)
+
+---
+
+## Analysis Performed
+
+The project answers business questions such as:
+
+- Finding books by genre
+- Identifying recently published books
+- Calculating total available stock
+- Finding highest and lowest priced books
+- Calculating total revenue generated
+- Finding frequently ordered books
+- Identifying customers with multiple orders
+- Finding highest spending customers
+- Calculating remaining stock after orders
+- Finding books that were never ordered
+- Finding customers with no orders
+- Ranking customers based on spending
+- Calculating running revenue over time
+- Finding the highest revenue-generating book in each genre
+
+---
+
+## Repository Structure
+BookStore-SQL-Analytics/
+
+├── BookStore_SQL_Analytics.sql
+├── Books.csv
+├── Customers.csv
+├── Orders.csv
+└── README.md
+
+
+---
+
+## How to Run This Project
+
+1. Install PostgreSQL.
+2. Create a new database.
+3. Execute the SQL file to create tables.
+4. Import CSV files using the provided `COPY` statements.
+5. Run the queries to view analysis results.
+
+---
+
+## Skills Demonstrated
+
+- PostgreSQL
+- SQL Query Writing
+- Relational Database Design
+- Data Analysis
+- Joins and Aggregations
+- Business Problem Solving
+
+---
+
+## Author
+
+**Hemanth Chowdary**
+
+GitHub:
+https://github.com/hemanthchowdary910
