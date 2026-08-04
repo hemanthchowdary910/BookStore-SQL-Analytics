@@ -1,106 +1,102 @@
-# Book Store Management System | PostgreSQL SQL Project
+# 📚 Book Store Management System | PostgreSQL SQL Project
 
-## Project Overview
+## 📖 Project Overview
 
-This project focuses on analyzing a bookstore database using PostgreSQL.
+This project demonstrates how PostgreSQL can be used to manage and analyze data for a bookstore. It covers the complete workflow of designing a relational database, importing CSV datasets, and writing SQL queries to solve real-world business problems.
 
-The goal of this project was to practice SQL by creating relational tables, importing CSV data, and writing queries to answer different business questions related to books, customers, orders, sales, and inventory.
-
-The database contains information about available books, customers, and customer orders. The analysis includes basic data retrieval, sales calculations, customer analysis, inventory tracking, and revenue-based insights.
+The project focuses on customer purchases, inventory management, sales analysis, and revenue insights while practicing essential SQL concepts used in data analytics.
 
 ---
 
-## Database Structure
+## 🗂️ Database Structure
 
-The database consists of three connected tables.
+The database consists of three related tables.
 
-### Books
+### 📘 Books
 
-Stores information about the books available in the store.
+Stores information about every book available in the bookstore.
 
-Columns:
-- Book ID
+**Columns**
+
+- Book_ID
 - Title
 - Author
 - Genre
-- Published Year
+- Published_Year
 - Price
 - Stock
 
-### Customers
+### 👤 Customers
 
-Contains customer information.
+Stores customer details.
 
-Columns:
-- Customer ID
+**Columns**
+
+- Customer_ID
 - Name
 - Email
 - Phone
 - City
 - Country
 
-### Orders
+### 🛒 Orders
 
-Stores customer purchase information.
+Stores purchase records for customers.
 
-Columns:
-- Order ID
-- Customer ID
-- Book ID
-- Order Date
+**Columns**
+
+- Order_ID
+- Customer_ID
+- Book_ID
+- Order_Date
 - Quantity
-- Total Amount
-
-### Table Relationships
-
-```text
-Customers
-    |
-    | 1 : Many
-    |
-  Orders
-    |
-    | Many : 1
-    |
-  Books
-```
-
-- One customer can place multiple orders.
-- One book can appear in multiple orders.
+- Total_Amount
 
 ---
 
-## Dataset Information
+## 🔗 Table Relationships
 
-The project uses three CSV datasets:
-
-- **Books.csv** - Contains book details such as title, author, genre, price, and stock.
-- **Customers.csv** - Contains customer information.
-- **Orders.csv** - Contains order transaction details.
-
-The datasets were imported into PostgreSQL using the `COPY` command.
+| Parent Table | Child Table | Relationship |
+|--------------|------------|--------------|
+| Customers | Orders | One Customer can place many Orders (1:N) |
+| Books | Orders | One Book can appear in many Orders (1:N) |
 
 ---
 
-## SQL Concepts Practiced
+## 📂 Dataset Information
 
-The project demonstrates the following SQL concepts:
+The project uses three CSV files:
 
-- Database and table creation
-- Primary keys and foreign keys
-- Data importing using `COPY`
-- Filtering with `WHERE`
-- Sorting with `ORDER BY`
-- Aggregate functions:
-  - `SUM()`
+- **Books.csv** – Book details including title, author, genre, price, and stock.
+- **Customers.csv** – Customer information.
+- **Orders.csv** – Customer purchase history.
+
+All datasets were imported into PostgreSQL using the `COPY` command.
+
+---
+
+## 🛠 SQL Concepts Practiced
+
+Throughout this project, the following SQL concepts were used:
+
+- Database Creation
+- Table Creation
+- Primary Keys
+- Foreign Keys
+- Data Import using `COPY`
+- Data Filtering (`WHERE`)
+- Sorting (`ORDER BY`)
+- Aggregate Functions
   - `COUNT()`
+  - `SUM()`
   - `AVG()`
-- `GROUP BY` and `HAVING`
+- `GROUP BY`
+- `HAVING`
 - `INNER JOIN`
 - `LEFT JOIN`
 - Subqueries
 - `COALESCE()`
-- Window Functions:
+- Window Functions
   - `RANK()`
   - `DENSE_RANK()`
   - `ROW_NUMBER()`
@@ -109,63 +105,82 @@ The project demonstrates the following SQL concepts:
 
 ---
 
-## Analysis Performed
+## 📊 Business Questions Solved
 
-The project answers business questions such as:
+This project answers several real-world business questions, including:
 
-- Finding books by genre
-- Identifying recently published books
-- Calculating total available stock
-- Finding highest and lowest priced books
-- Calculating total revenue generated
-- Finding frequently ordered books
-- Identifying customers with multiple orders
-- Finding highest spending customers
-- Calculating remaining stock after orders
-- Finding books that were never ordered
-- Finding customers with no orders
-- Ranking customers based on spending
-- Calculating running revenue over time
-- Finding the highest revenue-generating book in each genre
+- Find books belonging to a specific genre.
+- Retrieve recently published books.
+- Calculate total books currently in stock.
+- Identify the highest and lowest priced books.
+- Calculate total revenue generated.
+- Find the most frequently ordered books.
+- Identify customers with multiple purchases.
+- Find the highest spending customers.
+- Calculate remaining inventory after sales.
+- Find books that have never been ordered.
+- Find customers who have never placed an order.
+- Rank customers based on total spending.
+- Calculate running revenue over time.
+- Identify the highest revenue-generating book in each genre.
 
 ---
 
-## Repository Structure
-BookStore-SQL-Analytics/
+## 📁 Repository Structure
 
+```text
+BookStore-SQL-Analytics/
+│
 ├── BookStore_SQL_Analytics.sql
 ├── Books.csv
 ├── Customers.csv
 ├── Orders.csv
 └── README.md
-
-
----
-
-## How to Run This Project
-
-1. Install PostgreSQL.
-2. Create a new database.
-3. Execute the SQL file to create tables.
-4. Import CSV files using the provided `COPY` statements.
-5. Run the queries to view analysis results.
+```
 
 ---
 
-## Skills Demonstrated
+## 🚀 Getting Started
+
+### 1. Install PostgreSQL
+
+Download and install PostgreSQL on your system.
+
+### 2. Create a Database
+
+Create a new PostgreSQL database.
+
+### 3. Execute the SQL Script
+
+Run the `BookStore_SQL_Analytics.sql` file to create the required tables.
+
+### 4. Import the Datasets
+
+Import the CSV files using the `COPY` statements provided in the SQL script.
+
+### 5. Run the Queries
+
+Execute the SQL queries to explore insights and answer business questions.
+
+---
+
+## 💡 Skills Demonstrated
 
 - PostgreSQL
-- SQL Query Writing
+- SQL
 - Relational Database Design
+- Data Cleaning
 - Data Analysis
-- Joins and Aggregations
+- Joins
+- Aggregate Functions
+- Window Functions
+- Common Table Expressions (CTEs)
 - Business Problem Solving
 
 ---
 
-## Author
+## 👨‍💻 Author
 
 **Hemanth Chowdary**
 
-GitHub:
-https://github.com/hemanthchowdary910
+GitHub: https://github.com/hemanthchowdary910
