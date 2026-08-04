@@ -2,9 +2,19 @@
 
 ## 📖 Project Overview
 
-This project demonstrates how PostgreSQL can be used to manage and analyze data for a bookstore. It covers the complete workflow of designing a relational database, importing CSV datasets, and writing SQL queries to solve real-world business problems.
+This project demonstrates the use of PostgreSQL to design, manage, and analyze a relational database for a bookstore. It covers the complete workflow of designing database tables, importing CSV datasets, and writing SQL queries to solve real-world business problems.
 
-The project focuses on customer purchases, inventory management, sales analysis, and revenue insights while practicing essential SQL concepts used in data analytics.
+The project focuses on customer purchases, inventory management, sales analysis, and revenue insights while demonstrating essential SQL concepts used in data analytics.
+
+---
+
+## ✨ Key Features
+
+- Designed a relational database for a bookstore.
+- Imported CSV datasets into PostgreSQL using the `COPY` command.
+- Solved real-world business problems using SQL.
+- Performed customer, sales, and inventory analysis.
+- Applied joins, aggregate functions, window functions, subqueries, and Common Table Expressions (CTEs).
 
 ---
 
@@ -28,7 +38,7 @@ Stores information about every book available in the bookstore.
 
 ### 👤 Customers
 
-Stores customer details.
+Stores customer information.
 
 **Columns**
 
@@ -41,7 +51,7 @@ Stores customer details.
 
 ### 🛒 Orders
 
-Stores purchase records for customers.
+Stores customer purchase records.
 
 **Columns**
 
@@ -65,19 +75,19 @@ Stores purchase records for customers.
 
 ## 📂 Dataset Information
 
-The project uses three CSV files:
+The project uses three CSV datasets.
 
-- **Books.csv** – Book details including title, author, genre, price, and stock.
-- **Customers.csv** – Customer information.
-- **Orders.csv** – Customer purchase history.
+- **Books.csv** – Contains book details including title, author, genre, price, and stock.
+- **Customers.csv** – Contains customer information.
+- **Orders.csv** – Contains customer purchase history.
 
-All datasets were imported into PostgreSQL using the `COPY` command.
+The datasets were imported into PostgreSQL using the `COPY` command.
 
 ---
 
 ## 🛠 SQL Concepts Practiced
 
-Throughout this project, the following SQL concepts were used:
+This project demonstrates the following SQL concepts:
 
 - Database Creation
 - Table Creation
@@ -169,7 +179,7 @@ Execute the SQL queries to explore insights and answer business questions.
 - PostgreSQL
 - SQL
 - Relational Database Design
-- Data Cleaning
+- Data Import
 - Data Analysis
 - Joins
 - Aggregate Functions
